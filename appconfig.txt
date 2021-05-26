@@ -1,0 +1,3 @@
+<add name="defaultConnection" connectionString="Data Source=DESKTOP-4CFC7IC\SQLEXPRESS01;Initial Catalog=CursMagazin;Integrated Security=SSPI" providerName="System.Data.SqlClient"/>
+
+add log4net 

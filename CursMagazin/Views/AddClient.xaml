@@ -1,0 +1,40 @@
+﻿<Window x:Class="CursMagazin.Views.AddClient"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CursMagazin.Views"
+      mc:Ignorable="d" 
+             Title="AddClient" Height="450" Width="800" Background="AntiqueWhite">
+
+    <Grid>
+        <Label Content="First name" Margin="12,29,0,354" HorizontalAlignment="Left" Width="79" />
+        <Label Content="Last name" Margin="12,60,0,326" HorizontalAlignment="Left" Width="79" />
+        <Label Content="Age" Margin="12,93,0,286" HorizontalAlignment="Left" Width="79" />
+        <Label Content="Address" Margin="10,122,0,265" HorizontalAlignment="Left" Width="79" />
+        <Label Content="CNP" Margin="12,154,0,228" HorizontalAlignment="Left" Width="77" />
+        <TextBox Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="96,33,0,0" TextWrapping="Wrap" Text="{Binding Client.FirstName}" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="23" Margin="96,65,0,0" TextWrapping="Wrap" Text="{Binding Client.LastName}" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtAge" HorizontalAlignment="Left" Height="23" Margin="96,93,0,0" TextWrapping="Wrap" Text="{Binding Client.Age}" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="23" Margin="96,122,0,0" TextWrapping="Wrap" Text="{Binding Client.Adress}" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="txtCNP" HorizontalAlignment="Left" Height="23" Margin="94,154,0,0" TextWrapping="Wrap" Text="{Binding Client.CNP}" VerticalAlignment="Top" Width="120" />
+        <Button Content="Save client" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" Width="96" Height="50" Command="{Binding SaveCommand}" CommandParameter="{Binding Client}" Click="Button_Click"/>
+        <ListView ItemsSource="{Binding Clients }" SelectedItem="{Binding Client}" Name="lvCLients" HorizontalAlignment="Left" Height="148" Margin="296,29,0,0" VerticalAlignment="Top" Width="472" SelectionChanged="LvCLients_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" Width="30" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="First name" Width="100" DisplayMemberBinding="{Binding FirstName}" />
+                    <GridViewColumn Header="Last name" Width="100" DisplayMemberBinding="{Binding LastName}" />
+                    <GridViewColumn Header="Address" Width="100"  DisplayMemberBinding="{Binding Adress}"/>
+                    <GridViewColumn Header="Age" Width="30" DisplayMemberBinding="{Binding Age}" />
+                    <GridViewColumn Header="CNP" Width="100" DisplayMemberBinding="{Binding CNP}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="txtId" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="94,182,0,0" TextWrapping="Wrap" Text="{Binding Client.Id}" VerticalAlignment="Top" Width="120" />
+        <Label Content="Id" Margin="12,178,0,204" HorizontalAlignment="Left" Width="77" />
+        <Button Content="Update Client" HorizontalAlignment="Left" Margin="111,220,0,0" VerticalAlignment="Top" Width="103" Height="50" Click="Button_Click_1"/>
+        <Button Content="Delete Client" HorizontalAlignment="Left" Margin="53,275,0,0" VerticalAlignment="Top" Width="115" Height="54" Click="Button_Click_2"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="53,357,0,0" VerticalAlignment="Top" Width="115" Height="54" Click="Button_Click_3"/>
+    </Grid>
+</Window>

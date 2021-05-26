@@ -1,0 +1,36 @@
+﻿<Window x:Class="CursMagazin.Views.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CursMagazin.Views"
+        mc:Ignorable="d"
+        Title="Main" Height="450" Width="800" Background="AntiqueWhite">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+               
+                <MenuItem Header="Add Products" Click="MenuItem_Click">
+
+                </MenuItem>
+            </Menu>
+            <TextBox AcceptsReturn="True" />
+        </DockPanel>
+        <ListView ItemsSource="{Binding Product}" 
+                      SelectedItem="{Binding Product}" 
+                      Name="lvProducts" 
+                      HorizontalAlignment="Left"
+                      Height="360" VerticalAlignment="Top"
+                      Width="783"
+                      Visibility="Visible"
+                      ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,19,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="155" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Price (Lei)" Width="75"  DisplayMemberBinding="{Binding Price}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Delete product" Width="95" Height="25" Click="Button_Click" Margin="340,386,358.333,9.667"></Button>
+    </Grid>
+</Window>

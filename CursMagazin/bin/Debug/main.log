@@ -1,0 +1,6 @@
+2021-05-26 13:55:53,867 [1] INFO CursMagazin.Views.AddProduct - New product has been added to DB Pepene
+2021-05-26 13:55:53,876 [1] ERROR CursMagazin.Views.AddProduct - Error after product has been added to DB Pepene
+2021-05-26 13:55:53,876 [1] WARN CursMagazin.Views.AddProduct - Warn after error on product added to DB Pepene
+2021-05-26 13:56:23,409 [1] INFO CursMagazin.Views.AddProduct - New product has been added to DB Pepen1
+2021-05-26 13:56:23,409 [1] ERROR CursMagazin.Views.AddProduct - Error after product has been added to DB Pepen1
+2021-05-26 13:56:23,409 [1] WARN CursMagazin.Views.AddProduct - Warn after error on product added to DB Pepen1
